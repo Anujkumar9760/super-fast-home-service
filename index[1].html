@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Fast Home Service</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#222;background:#f7f9fc}
+header{background:linear-gradient(90deg,#0b63ce,#f28c18,#138a3d);color:white;padding:28px 16px;text-align:center}
+header h1{margin:0;font-size:34px} header p{font-size:18px;margin:8px 0}
+nav{background:#fff;padding:12px;text-align:center;box-shadow:0 2px 8px #bbb;position:sticky;top:0;z-index:5}
+nav a{margin:0 10px;text-decoration:none;color:#075fbd;font-weight:bold}
+.hero{padding:45px 18px;text-align:center;background:#eaf3ff}
+.hero h2{font-size:30px;color:#075fbd;margin:8px}.hero p{font-size:18px}
+.btn{display:inline-block;padding:13px 20px;border-radius:8px;text-decoration:none;color:#fff;font-weight:bold;margin:7px}
+.call{background:#138a3d}.wa{background:#0a8f43}.book{background:#f28c18}
+section{max-width:1100px;margin:auto;padding:35px 16px}h2{text-align:center;color:#075fbd}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:22px;border-radius:12px;box-shadow:0 2px 10px #ddd;text-align:center}
+.card h3{color:#075fbd;margin:8px}.card p{line-height:1.5}
+.price{font-size:20px;font-weight:bold;color:#138a3d}
+form{max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 10px #ddd}
+input,select,textarea{width:100%;padding:12px;margin:8px 0 14px;border:1px solid #ccc;border-radius:7px}
+button{border:0;padding:13px 20px;background:#075fbd;color:white;border-radius:7px;font-weight:bold;cursor:pointer}
+footer{background:#123;color:white;text-align:center;padding:25px;margin-top:20px}
+.small{font-size:14px;color:#666}
+</style>
+</head>
+<body>
+<header>
+<h1>सुपरफास्ट होम सर्विस</h1>
+<p>Super Fast Home Service</p>
+<p>आपके घर तक भरोसेमंद सेवा — 24×7</p>
+</header>
+
+<nav>
+<a href="#services">Services</a><a href="#tank">Tank Cleaning</a><a href="#booking">Booking</a><a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<h2>घर बैठे सर्विस बुक करें</h2>
+<p>काम के अनुसार उचित कीमत • तेज सेवा • आसान संपर्क</p>
+<a class="btn call" href="tel:7055693223">📞 Call Now</a>
+<a class="btn wa" href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%20mujhe%20service%20book%20karni%20hai.">💬 WhatsApp</a>
+<a class="btn book" href="#booking">📝 Booking करें</a>
+</div>
+
+<section id="services">
+<h2>हमारी सेवाएँ</h2>
+<div class="grid">
+<div class="card"><h3>🧹 Home Cleaning</h3><p>Room, Kitchen, Toilet और घर की सफाई।</p></div>
+<div class="card"><h3>💧 Water Tank Cleaning</h3><p>पानी की टंकी की सफाई pipe के साथ।</p></div>
+<div class="card"><h3>❄️ Electrical & Appliance</h3><p>Fridge, Washing Machine, AC, Fan आदि की सेवा।</p></div>
+<div class="card"><h3>🔧 Mechanic Service</h3><p>Bike, Car और EV vehicle service।</p></div>
+<div class="card"><h3>🧳 Travel Service</h3><p>Tour और Yatra से जुड़ी सहायता।</p></div>
+<div class="card"><h3>💍 Wedding Service</h3><p>Cook, Decoration, Tent और अन्य सेवाएँ।</p></div>
+<div class="card"><h3>🏠 अन्य Home Services</h3><p>भविष्य में नई सेवाएँ और कीमतें जोड़ी जा सकती हैं।</p></div>
+<div class="card"><h3>⏱️ Fast Response</h3><p>उपलब्धता के अनुसार लगभग 30 मिनट–1 घंटे में सेवा का लक्ष्य।</p></div>
+</div>
+</section>
+
+<section id="tank">
+<h2>Water Tank Cleaning Rate</h2>
+<div class="grid">
+<div class="card"><h3>500 Liter</h3><div class="price">₹200</div></div>
+<div class="card"><h3>1000 Liter</h3><div class="price">₹300</div></div>
+<div class="card"><h3>2000 Liter</h3><div class="price">₹500</div></div>
+</div>
+<p class="small" style="text-align:center">अन्य काम की कीमत काम देखकर तय की जा सकती है।</p>
+</section>
+
+<section id="booking">
+<h2>Service Booking</h2>
+<form onsubmit="sendBooking(event)">
+<label>नाम</label><input id="name" required>
+<label>मोबाइल नंबर</label><input id="phone" type="tel" required>
+<label>Service चुनें</label>
+<select id="service" required>
+<option value="">-- Service चुनें --</option>
+<option>Home Cleaning</option><option>Water Tank Cleaning</option><option>AC / Fan / Electrical</option>
+<option>Fridge / Washing Machine</option><option>Bike / Car / EV Mechanic</option>
+<option>Travel / Yatra</option><option>Wedding Service</option><option>Other</option>
+</select>
+<label>पता</label><textarea id="address" rows="3" required></textarea>
+<label>समस्या / काम की जानकारी</label><textarea id="details" rows="3"></textarea>
+<button type="submit">WhatsApp पर Booking भेजें</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>संपर्क करें</h2>
+<div class="card">
+<p>📞 Inquiry: <a href="tel:7055693223">7055693223</a></p>
+<p>💬 WhatsApp: <a href="https://wa.me/919760566081">9760566081</a></p>
+<p>✉️ anujk94575@gmail.com</p>
+<p>📍 Mirzapur Bakaina, Chandpur, Bijnor, Uttar Pradesh - 246736</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Super Fast Home Service</p>
+<p>24×7 Home Service | Fast & Reliable</p>
+</footer>
+
+<script>
+function sendBooking(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value;
+ const p=document.getElementById('phone').value;
+ const s=document.getElementById('service').value;
+ const a=document.getElementById('address').value;
+ const d=document.getElementById('details').value;
+ const msg=`Namaste Super Fast Home Service,%0A%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0AService: ${encodeURIComponent(s)}%0AAddress: ${encodeURIComponent(a)}%0ADetails: ${encodeURIComponent(d)}`;
+ window.open('https://wa.me/919760566081?text='+msg,'_blank');
+}
+</script>
+</body>
+</html>
