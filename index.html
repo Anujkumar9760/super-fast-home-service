@@ -478,10 +478,16 @@ const s=document.getElementById("service").value;
 const a=document.getElementById("address").value;
 const d=document.getElementById("details").value;
 
-const msg=
-"Namaste Super Fast Home Service,%0A%0A"+
-"Name: "+encodeURIComponent(n)+"%0A"+
-"Mobile: "+encodeURIComponent(p)+"%0A"+
-"Service: "+encodeURIComponent(s)+"%0A"+
-"Address: "+encodeURIComponent(a)+"%0A"+
-"Details
+const msg =
+"Namaste Super Fast Home Service,%0A%0A" +
+"Name: " + encodeURIComponent(n) + "%0A" +
+"Mobile: " + encodeURIComponent(p) + "%0A" +
+"Service: " + encodeURIComponent(s) + "%0A" +
+"Address: " + encodeURIComponent(a) + "%0A" +
+"Details: " + encodeURIComponent(d);
+
+const url = "https://wa.me/919760566081?text=" + msg;
+
+window.open(url, "_blank");
+}
+</script>
