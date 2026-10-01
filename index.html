@@ -131,6 +131,62 @@ section h2{
   color:#008f4c;
 }
 
+/* HOME CLEANING RATE */
+.cleaning-rate{
+  background:linear-gradient(135deg,#eef7ff,#f0fff7);
+}
+
+.rate-card{
+  background:white;
+  padding:25px 20px;
+  border-radius:14px;
+  box-shadow:0 4px 15px rgba(0,0,0,.12);
+  border:3px solid #ff7900;
+  text-align:center;
+}
+
+.rate-card h3{
+  color:#0757a5;
+  font-size:21px;
+  margin-bottom:10px;
+}
+
+.rate-price{
+  font-size:36px;
+  font-weight:bold;
+  color:#008f4c;
+  margin:10px 0;
+}
+
+.rate-price span{
+  font-size:18px;
+  color:#333;
+}
+
+.rate-card p{
+  margin-bottom:15px;
+}
+
+.rate-book{
+  display:inline-block;
+  background:#ff7900;
+  color:white;
+  text-decoration:none;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.note{
+  max-width:700px;
+  margin:25px auto 0;
+  padding:15px;
+  background:#fff3cd;
+  border-left:5px solid #ff7900;
+  border-radius:8px;
+  text-align:center;
+}
+
 form{
   max-width:650px;
   margin:auto;
@@ -203,6 +259,12 @@ button{
   padding:15px;
   margin-top:10px;
   border-radius:8px;
+  border-left:4px solid #ff7900;
+}
+
+.review-stars{
+  color:#ffb400;
+  font-size:20px;
 }
 
 .contact{
@@ -228,6 +290,7 @@ footer{
 }
 
 @media(max-width:600px){
+
   header h1{
     font-size:28px;
   }
@@ -240,6 +303,10 @@ footer{
     display:inline-block;
     margin:3px 4px;
     font-size:14px;
+  }
+
+  .rate-price{
+    font-size:32px;
   }
 }
 </style>
@@ -255,6 +322,7 @@ footer{
 
 <nav>
 <a href="#services">सेवाएँ</a>
+<a href="#cleaning-rate">Cleaning Rate</a>
 <a href="#tank">टैंक रेट</a>
 <a href="#booking">Booking</a>
 <a href="#rating">Rating</a>
@@ -262,18 +330,28 @@ footer{
 </nav>
 
 <div class="hero">
+
 <h2>🏠 घर बैठे सर्विस बुक करें</h2>
+
 <p>उचित कीमत • तेज सेवा • आसान संपर्क</p>
 
-<a class="btn call" href="tel:7055693223">📞 Call Now</a>
+<a class="btn call" href="tel:7055693223">
+📞 Call Now
+</a>
 
 <a class="btn wa"
 href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%20mujhe%20service%20book%20karni%20hai.">
 💬 WhatsApp
 </a>
 
-<a class="btn book" href="#booking">📝 Booking करें</a>
+<a class="btn book" href="#booking">
+📝 Booking करें
+</a>
+
 </div>
+
+
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -283,7 +361,8 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 
 <div class="card">
 <h3>🧹 Home Cleaning</h3>
-<p>Room, Kitchen, Toilet और घर की सफाई।</p>
+<p>Room, Kitchen, Bathroom, Toilet और Floor की सफाई।</p>
+<p><strong>Rate: ₹5 / sq.ft से शुरू</strong></p>
 </div>
 
 <div class="card">
@@ -324,6 +403,65 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 </div>
 </section>
 
+
+<!-- HOME CLEANING RATE -->
+
+<section id="cleaning-rate" class="cleaning-rate">
+
+<h2>🧹 Home Cleaning Rate</h2>
+
+<div class="grid">
+
+<div class="rate-card">
+
+<h3>🏠 Complete Floor Cleaning</h3>
+
+<p>
+Room + Bathroom + Toilet + Kitchen + Floor
+</p>
+
+<div class="rate-price">
+₹5 <span>/ sq.ft</span>
+</div>
+
+<a class="rate-book" href="#booking">
+📝 Book Cleaning
+</a>
+
+</div>
+
+
+<div class="rate-card">
+
+<h3>🚿 Bathroom + Kitchen + Toilet</h3>
+
+<p>
+Bathroom + Kitchen + Toilet Cleaning
+</p>
+
+<div class="rate-price">
+₹8 <span>/ sq.ft</span>
+</div>
+
+<a class="rate-book" href="#booking">
+📝 Book Cleaning
+</a>
+
+</div>
+
+</div>
+
+<div class="note">
+<strong>ℹ️ ध्यान दें:</strong>
+<br>
+Final price area, गंदगी और काम की स्थिति के अनुसार तय किया जा सकता है।
+</div>
+
+</section>
+
+
+<!-- WATER TANK RATE -->
+
 <section id="tank">
 
 <h2>💧 Water Tank Cleaning Rate</h2>
@@ -353,6 +491,9 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 
 </section>
 
+
+<!-- BOOKING -->
+
 <section id="booking">
 
 <h2>📝 Service Booking</h2>
@@ -360,37 +501,101 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 <form onsubmit="sendBooking(event)">
 
 <label>नाम</label>
-<input id="name" required>
+<input id="name" type="text" placeholder="अपना नाम लिखें" required>
 
 <label>मोबाइल नंबर</label>
-<input id="phone" type="tel" required>
+<input id="phone" type="tel" placeholder="मोबाइल नंबर" required>
 
 <label>Service चुनें</label>
 
-<select id="service" required>
+<select id="service" onchange="showAreaField()" required>
+
 <option value="">-- Service चुनें --</option>
-<option>Home Cleaning</option>
-<option>Water Tank Cleaning</option>
-<option>AC / Fan / Electrical</option>
-<option>Fridge / Washing Machine</option>
-<option>Bike / Car / EV Mechanic</option>
-<option>Travel / Yatra</option>
-<option>Wedding Service</option>
-<option>Other</option>
+
+<option value="Home Cleaning - Complete Floor Cleaning ₹5/sq.ft">
+Home Cleaning - Complete Floor ₹5/sq.ft
+</option>
+
+<option value="Home Cleaning - Bathroom + Kitchen + Toilet ₹8/sq.ft">
+Home Cleaning - Bathroom + Kitchen + Toilet ₹8/sq.ft
+</option>
+
+<option value="Water Tank Cleaning">
+Water Tank Cleaning
+</option>
+
+<option value="AC / Fan / Electrical">
+AC / Fan / Electrical
+</option>
+
+<option value="Fridge / Washing Machine">
+Fridge / Washing Machine
+</option>
+
+<option value="Bike / Car / EV Mechanic">
+Bike / Car / EV Mechanic
+</option>
+
+<option value="Travel / Yatra">
+Travel / Yatra
+</option>
+
+<option value="Wedding Service">
+Wedding Service
+</option>
+
+<option value="Other">
+Other
+</option>
+
 </select>
 
+
+<div id="areaBox" style="display:none;">
+
+<label>Area / Square Feet</label>
+
+<input
+id="area"
+type="number"
+min="1"
+placeholder="जैसे 1000"
+>
+
+<p id="estimatedPrice"
+style="margin-top:8px;font-weight:bold;color:#008f4c;">
+</p>
+
+</div>
+
+
 <label>पता</label>
-<textarea id="address" rows="3" required></textarea>
+
+<textarea
+id="address"
+rows="3"
+placeholder="पूरा पता लिखें"
+required></textarea>
+
 
 <label>समस्या / काम की जानकारी</label>
-<textarea id="details" rows="3"></textarea>
+
+<textarea
+id="details"
+rows="3"
+placeholder="काम के बारे में जानकारी"></textarea>
+
 
 <button type="submit">
 💬 WhatsApp पर Booking भेजें
 </button>
 
 </form>
+
 </section>
+
+
+<!-- RATING -->
 
 <section id="rating">
 
@@ -401,20 +606,33 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 <p>अपनी सेवा का अनुभव बताएं</p>
 
 <div class="stars" id="stars">
+
 <span onclick="setRating(1)">★</span>
 <span onclick="setRating(2)">★</span>
 <span onclick="setRating(3)">★</span>
 <span onclick="setRating(4)">★</span>
 <span onclick="setRating(5)">★</span>
+
 </div>
 
 <form onsubmit="submitReview(event)">
 
 <label>आपका नाम</label>
-<input id="reviewName" required>
+
+<input
+id="reviewName"
+type="text"
+placeholder="अपना नाम"
+required
+>
 
 <label>Review</label>
-<textarea id="reviewText" rows="3" required></textarea>
+
+<textarea
+id="reviewText"
+rows="3"
+placeholder="अपना अनुभव लिखें"
+required></textarea>
 
 <button type="submit">
 ⭐ Review Submit करें
@@ -425,7 +643,11 @@ href="https://wa.me/919760566081?text=Namaste%20Super%20Fast%20Home%20Service,%2
 <div class="review-list" id="reviewList"></div>
 
 </div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -457,7 +679,9 @@ anujk94575@gmail.com
 </p>
 
 </div>
+
 </section>
+
 
 <footer>
 
@@ -466,28 +690,275 @@ anujk94575@gmail.com
 
 </footer>
 
+
 <script>
+
+/* =========================
+   HOME CLEANING AREA
+========================= */
+
+function showAreaField(){
+
+const service = document.getElementById("service").value;
+const areaBox = document.getElementById("areaBox");
+
+if(service.includes("Home Cleaning")){
+
+  areaBox.style.display = "block";
+
+}else{
+
+  areaBox.style.display = "none";
+
+  document.getElementById("area").value = "";
+  document.getElementById("estimatedPrice").innerText = "";
+
+}
+
+}
+
+
+/* =========================
+   CLEANING PRICE CALCULATOR
+========================= */
+
+document.getElementById("area").addEventListener("input", function(){
+
+const service = document.getElementById("service").value;
+const area = Number(this.value);
+const result = document.getElementById("estimatedPrice");
+
+if(!service.includes("Home Cleaning") || !area){
+
+  result.innerText = "";
+  return;
+
+}
+
+let rate = 0;
+
+if(service.includes("₹5")){
+
+  rate = 5;
+
+}else if(service.includes("₹8")){
+
+  rate = 8;
+
+}
+
+if(rate > 0){
+
+  const total = area * rate;
+
+  result.innerText =
+  "लगभग अनुमानित कीमत: ₹" +
+  total.toLocaleString("en-IN");
+
+}
+
+});
+
+
+/* =========================
+   WHATSAPP BOOKING
+========================= */
 
 function sendBooking(e){
 
 e.preventDefault();
 
-const n=document.getElementById("name").value;
-const p=document.getElementById("phone").value;
-const s=document.getElementById("service").value;
-const a=document.getElementById("address").value;
-const d=document.getElementById("details").value;
+const n = document.getElementById("name").value.trim();
+const p = document.getElementById("phone").value.trim();
+const s = document.getElementById("service").value;
+const area = document.getElementById("area").value;
+const a = document.getElementById("address").value.trim();
+const d = document.getElementById("details").value.trim();
 
-const msg =
+let msg =
 "Namaste Super Fast Home Service,%0A%0A" +
+"📝 NEW BOOKING%0A%0A" +
 "Name: " + encodeURIComponent(n) + "%0A" +
 "Mobile: " + encodeURIComponent(p) + "%0A" +
-"Service: " + encodeURIComponent(s) + "%0A" +
-"Address: " + encodeURIComponent(a) + "%0A" +
-"Details: " + encodeURIComponent(d);
+"Service: " + encodeURIComponent(s) + "%0A";
 
-const url = "https://wa.me/919760566081?text=" + msg;
+if(s.includes("Home Cleaning")){
+
+  msg +=
+  "Area: " + encodeURIComponent(area) + " sq.ft%0A";
+
+}
+
+msg +=
+"Address: " + encodeURIComponent(a) + "%0A" +
+"Details: " + encodeURIComponent(d) + "%0A%0A" +
+"Super Fast Home Service";
+
+const url =
+"https://wa.me/919760566081?text=" + msg;
 
 window.open(url, "_blank");
+
 }
+
+
+/* =========================
+   RATING SYSTEM
+========================= */
+
+let selectedRating = 0;
+
+function setRating(rating){
+
+selectedRating = rating;
+
+const stars =
+document.querySelectorAll("#stars span");
+
+stars.forEach(function(star,index){
+
+if(index < rating){
+
+  star.classList.add("active");
+
+}else{
+
+  star.classList.remove("active");
+
+}
+
+});
+
+}
+
+
+/* =========================
+   REVIEW SUBMIT
+========================= */
+
+function submitReview(e){
+
+e.preventDefault();
+
+if(selectedRating === 0){
+
+alert("कृपया पहले 1 से 5 Star Rating चुनें।");
+
+return;
+
+}
+
+const name =
+document.getElementById("reviewName").value.trim();
+
+const review =
+document.getElementById("reviewText").value.trim();
+
+const reviews =
+JSON.parse(localStorage.getItem("homeServiceReviews") || "[]");
+
+reviews.push({
+
+name:name,
+rating:selectedRating,
+review:review,
+date:new Date().toLocaleDateString("hi-IN")
+
+});
+
+localStorage.setItem(
+"homeServiceReviews",
+JSON.stringify(reviews)
+);
+
+document.getElementById("reviewName").value = "";
+document.getElementById("reviewText").value = "";
+
+selectedRating = 0;
+
+document.querySelectorAll("#stars span").forEach(function(star){
+
+star.classList.remove("active");
+
+});
+
+loadReviews();
+
+alert("धन्यवाद! आपका Review Submit हो गया।");
+
+}
+
+
+/* =========================
+   LOAD REVIEWS
+========================= */
+
+function loadReviews(){
+
+const list =
+document.getElementById("reviewList");
+
+const reviews =
+JSON.parse(localStorage.getItem("homeServiceReviews") || "[]");
+
+list.innerHTML = "";
+
+reviews.slice().reverse().forEach(function(item){
+
+let stars = "";
+
+for(let i=1;i<=5;i++){
+
+  stars += i <= item.rating ? "★" : "☆";
+
+}
+
+const div = document.createElement("div");
+
+div.className = "review";
+
+div.innerHTML =
+"<strong>" +
+escapeHTML(item.name) +
+"</strong>" +
+"<div class='review-stars'>" +
+stars +
+"</div>" +
+"<p>" +
+escapeHTML(item.review) +
+"</p>" +
+"<small>" +
+item.date +
+"</small>";
+
+list.appendChild(div);
+
+});
+
+}
+
+
+/* =========================
+   SECURITY FOR REVIEW TEXT
+========================= */
+
+function escapeHTML(text){
+
+return text
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* LOAD REVIEWS WHEN PAGE OPENS */
+
+loadReviews();
+
 </script>
+
+</body>
+</html>
